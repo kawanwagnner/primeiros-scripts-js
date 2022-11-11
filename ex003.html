@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Scripts</title>
+
+<style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00a8a8;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Primeiros Scripts</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam laborum, facere, voluptate nemo expedita
+        iusto quas ipsam voluptatum quis vel architecto possimus odio harum itaque deserunt, a sapiente voluptatibus.
+    </p>
+</body>
+<script>
+
+    var nome = String (window.prompt('Qual é o seu nome? '))
+    var n1 = Number (window.prompt('Digite um valor: '))
+    var n2 = Number (window.prompt('Digite outro valor: '))
+    var result = Number (n1 + n2)
+
+    window.alert (`Olá, ${nome}! A soma entre os números digitados é: ${result.toLocaleString('pt-BR', {style: 'currency: BRL'})}.`)
+
+</script>
+
+</html>
