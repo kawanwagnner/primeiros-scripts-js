@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #resultado {
+            margin: 20px 0px 0px -50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" id="somar">
+    <div id="resultado">Resultado:</div>
+
+</body>
+
+<script>
+    var btn = document.querySelector('#somar')
+    
+    btn.addEventListener('click', () => { 
+    var txt1 = document.querySelector('#txtn1') 
+    var txt2 = document.querySelector('#txtn2') 
+    var res = document.querySelector('#resultado')
+    var n1 = Number (txt1.value)
+    var n2 = Number (txt2.value)
+    var result = n1 + n2
+
+    res.innerHTML = (`A soma ente ${n1} e ${n2} é ${result}.`)
+    }
+    )
+</script>
+</html>
