@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posso Votar?</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Posso Votar?</h1>
+    <p>Digite sua idade: <input type="number" name="idade" id="idade"> <input type="button" value="Verificar"
+            id="verificar"></p>
+    <p id="res">Resposta: </p>
+</body>
+<script>
+    var btn = document.querySelector('#verificar')
+    btn.addEventListener('click', () => {
+        var idade = document.querySelector('#idade')
+        var res = document.querySelector('#res')
+        var id = Number(idade.value)
+        if (id < 16) {
+            res.innerHTML = `Você tem ${id} anos de idade.`
+            res.innerHTML += `<p>Não Vota.</p>`
+        } else if (id < 18 || id > 67) {
+            res.innerHTML = `Você tem ${id} anos de idade.`
+            res.innerHTML += `<p>Voto Opcional.</p>`
+        } else {
+            res.innerHTML = `Você tem ${id} anos de idade.`
+            res.innerHTML += `<p>Voto Obrigatório.</p>`
+        }
+    }
+    )
+</script>
+
+</html>
