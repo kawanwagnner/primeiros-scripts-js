@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de formúlario</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        input:invalid {
+            background-color: #ff00002f;
+            animation: shake .3s;
+            
+        }
+
+        @keyframes shake {
+            25% { transform: translateX(4px);}
+            50% { transform: translateX(-4px);}
+            75% { transform: translateX(40px);}
+        }
+
+        #clock {
+            margin: 50px auto;
+            border: 1px solid #0000007e;
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de formúlario interativo com html e css</h1>
+    <input type="text"
+    pattern="[abcdefghijklmnopqrstuvwwxyzABCDEFGHIJKLMNOPQRSTUVWXYZçÇ]*"    
+    placeholder="What's your name?">
+    <br>
+    <div id="clock"></div>
+</body>
+<script>
+    setInterval( () => {
+        let date = new Date()
+        let clock = document.getElementById('clock')
+
+        if (date < 10) {date = '0' + date }
+
+        clock.innerHTML =
+        date.getHours() + ': ' +
+        date.getMinutes() + ': ' +
+        date.getSeconds()
+
+    })
+</script>
+</html>
