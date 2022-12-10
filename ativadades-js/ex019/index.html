@@ -4,32 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Idade</title>
-    <link rel="stylesheet" href="atividade016.css">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="">
-    <header>
-
-    </header>
+<body>
     <main>
-        <h1 id="titulo">Verificador de Idade</h1>
+        <h1 id="titulo">Tabuada</h1>
         <div id="container">
             <div>
+                <p> Número: 
+                    <input type="number" id="numeroTabuada">
+                    <input type="button" value="Gerar Tabuada" id="send">
+                </p>
+                <h3>-------- xx --------</h3>
                 <p>
-                    Ano de Nascimento: <input type="number" name="nasc" min="0" id="nasc">
+                    <select name="tabuada" id="container-tabuada" size="10">
+                        <option>Digite um valor acima:</option>
+                    </select>
                 </p>
-                <p> Sexo: 
-                    <input type="radio" name="radiosex">
-                    <label for="radiosex">Masculino</label>
-                    <input type="radio" name="radiosex">
-                    <label for="radiosex">Feminino</label>
-                </p>
-                <p>
-                    <input type="button" value="Verificar" id="verificar">
-                </p>
-            </div>
-            <div id="res">
-                Preencha as informações para ter sua resposta.
             </div>
         </div>
     </main>
@@ -37,5 +29,5 @@
         <p>&copy; <a href="https://github.com/kawanwagnner">KawanWagnner</a></p>
     </footer>
 </body>
-<script src="att016.js"></script>
+<script src="script.js"></script>
 </html>
