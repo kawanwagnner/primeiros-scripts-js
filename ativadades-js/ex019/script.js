@@ -1,5 +1,5 @@
 const btn = document.querySelector('#send') 
-btn.addEventListener('click', () => {
+btn.addEventListener('click' || 'Enter', () => {
     let NumeroTabuada = document.querySelector('#numeroTabuada')
     const tabuada = document.querySelector('#container-tabuada')
     
